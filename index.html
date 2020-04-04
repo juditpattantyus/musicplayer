@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/static/styles/style.min.css">
+</head>
+
+<body>
+    <section>
+        <div class="audio">
+            <h4 class="audio-title">
+                <span>Listen to: </span><strong>Test mp3 file</strong>
+            </h4>
+            <audio preload="auto" controls>
+                <source src="/sound/till_there_was_you.mp3">
+                <!-- <source src="sample.wav">
+                <source src="sample.ogg">
+                <source src="sample.aac" type="audio/aac"> -->
+            </audio>
+            <div class="audio">
+                <h4 class="audio-title">
+                    <span>Listen to: </span><strong>Test m4a file</strong>
+                </h4>
+                <audio preload="auto" controls>
+                    <source src="/sound/rapapampam.m4a" type="audio/mp4">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
