@@ -9,28 +9,51 @@
 </head>
 
 <body>
-    <section>
-        <div class="audio">
-            <h4 class="audio-title">
-                <span>Listen to: </span><strong>Test mp3 file</strong>
-            </h4>
-            <audio preload="auto" controls>
-                <source src="./sound/till_there_was_you.mp3">
-                <!-- <source src="sample.wav">
+    <div class="audio">
+        <h4 class="audio-title">Test mp3 file</h4>
+        <audio preload="auto" controls>
+            <source src="./sound/till_there_was_you.mp3">
+            <!-- <source src="sample.wav">
                 <source src="sample.ogg">
                 <source src="sample.aac" type="audio/aac"> -->
-            </audio>
-            <div class="audio">
-                <h4 class="audio-title">
-                    <span>Listen to: </span><strong>Test m4a file</strong>
-                </h4>
-                <audio preload="auto" controls>
-                    <source src="./sound/rapapampam.m4a" type="audio/mp4">
-                </audio>
+        </audio>
+        <div class="transcript-wrapper">
+            <button class="btn-text transcript-trigger">Show transcript</button>
+            <div class="transcript">
+                <h3>Till there was you</h3>
+
+                <p>
+                    There were bells on a hill <br>
+                    But I never heard them ringing<br>
+                    No, I never heard them at all<br>
+                    Till there was you<br><br>
+
+                    There were birds in the sky<br>
+                    But I never saw them winging<br>
+                    No, I never saw them at all<br>
+                    Till there was you<br><br>
+
+                    Then there was music and wonderful roses<br>
+                    They tell me<br>
+                    In sweet fragrant meadows<br>
+                    Of dawn and dew<br><br>
+
+                    There was love all around<br>
+                    But I never heard it singing<br>
+                    No, I never heard it at all<br>
+                    Till there was you<br><br>
+
+                    Then there was music and…</p>
             </div>
         </div>
-    </section>
-
+    </div>
+    <div class="audio">
+        <h4 class="audio-title">Test m4a file</h4>
+        <audio preload="auto" controls>
+            <source src="./sound/rapapampam.m4a" type="audio/mp4">
+        </audio>
+    </div>
+    <script src="./audioplayer.js"></script>
 </body>
 
 </html>

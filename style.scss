@@ -2,42 +2,35 @@
 $audio-title-color: $primary;
 $audio-background-color: $decor;
 $audio-border-color: $copy;
+$transcript-border: $primary;
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    padding: 2em 0;
     font-family: Verdana, Arial, sans-serif;
     color: $copy;
+    margin: 0;;
 }
 
 .audio {
-    padding: 1em 0;
     margin: 0 auto;
-    max-width: 480px;
+    padding: 1em 0;
+    width: 90%;
+    max-width: 720px;
 
     .audio-title {
-        font-size: 0.75em;
-        font-weight: 400;
         display: flex;
+        font-size: 0.875em;
         flex-direction: row;
-        margin: .5em;
-
-        strong {
-            display: block;
-            color: $audio-title-color;
-            font-weight: 400;
-
-            @media screen and (min-width: 768px) {
-                display: inline-block;
-            }
-        }
+        margin: .5rem;
+        color: $audio-title-color;
     }
 
     audio {
         width: 100%;
+        margin: 0 auto;
 
         &::-webkit-media-controls-enclosure {
             border-radius: 0;
@@ -45,4 +38,37 @@ body {
             border: 1px solid $audio-border-color;
         }
     }
+
+    .transcript-trigger {
+        width: 100%;
+        text-align: right;
+        display: block;
+        padding: .5rem;
+        &:hover,
+        &:focus {
+            outline: none;
+            text-decoration: underline;
+        }
+    }
+
+    .transcript {
+        font-size: .875rem;
+        padding: 0 1rem;
+        border: 1px solid $copy;
+        border-top: 3px solid $transcript-border;
+        opacity: 0;
+        height: 0;
+
+        &.is-visible {
+            opacity: 1;
+            height: auto;
+        }
+    }
+}
+
+.btn-text {
+    border: none;
+    background: inherit;
+    cursor: pointer;
+    display: inline-block;
 }
