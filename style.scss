@@ -1,8 +1,8 @@
 @import 'vars';
-$audio-title-color: $primary;
+$audio-title-color: $copy;
 $audio-background-color: $decor;
 $audio-border-color: $copy;
-$transcript-border: $primary;
+$transcript-border: $primary-20;
 
 * {
     box-sizing: border-box;
@@ -55,9 +55,19 @@ body {
         font-size: .875rem;
         padding: 0 1rem;
         border: 1px solid $copy;
-        border-top: 3px solid $transcript-border;
+        position: relative;
+        padding-top: 10px;
         opacity: 0;
         height: 0;
+        &::before {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 10px;
+            top:0; left: 0;
+            background: $transcript-border;
+        }
 
         &.is-visible {
             opacity: 1;
